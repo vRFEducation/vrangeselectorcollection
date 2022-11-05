@@ -1,6 +1,9 @@
 #include "VFloatRangeSelector.h"
 #include "VFloatRangeSelectorPlugin.h"
+#include "VFloatRangeSelectorTaskMenu.h"
 
+#include <QDesignerFormEditorInterface>
+#include <QExtensionManager>
 #include <QtPlugin>
 
 VFloatRangeSelectorPlugin::VFloatRangeSelectorPlugin(QObject *parent)
@@ -9,12 +12,15 @@ VFloatRangeSelectorPlugin::VFloatRangeSelectorPlugin(QObject *parent)
     m_initialized = false;
 }
 
-void VFloatRangeSelectorPlugin::initialize(QDesignerFormEditorInterface * /* core */)
+void VFloatRangeSelectorPlugin::initialize(QDesignerFormEditorInterface *  core )
 {
     if (m_initialized)
         return;
 
-    // Add extension registrations, etc. here
+    QExtensionManager *manager = core->extensionManager();
+    manager->registerExtensions(
+                new VFloatRangeSelectorTaskMenuFactory(manager),
+                Q_TYPEID(QDesignerTaskMenuExtension));
 
     m_initialized = true;
 }

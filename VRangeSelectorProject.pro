@@ -2,8 +2,12 @@ CONFIG      += plugin debug_and_release
 TARGET      = $$qtLibraryTarget(VRangeSelectorCollectionPlugin)
 TEMPLATE    = lib
 
-HEADERS     = VFloatRangeSelectorPlugin.h VIntegerRangeSelectorPlugin.h VComboRangeSelectorPlugin.h VRangeSelectorCollection.h
-SOURCES     = VFloatRangeSelectorPlugin.cpp VIntegerRangeSelectorPlugin.cpp VComboRangeSelectorPlugin.cpp VRangeSelectorCollection.cpp
+HEADERS     = VFloatRangeSelectorPlugin.h VIntegerRangeSelectorPlugin.h VComboRangeSelectorPlugin.h VRangeSelectorCollection.h \
+    VFloatRangeSelectorEditDialog.h \
+    VFloatRangeSelectorTaskMenu.h
+SOURCES     = VFloatRangeSelectorPlugin.cpp VIntegerRangeSelectorPlugin.cpp VComboRangeSelectorPlugin.cpp VRangeSelectorCollection.cpp \
+    VFloatRangeSelectorEditDialog.cpp \
+    VFloatRangeSelectorTaskMenu.cpp
 RESOURCES   = icons.qrc
 LIBS        += -L. 
 
@@ -19,4 +23,7 @@ INSTALLS    += target
 include(VIntegerRangeSelector.pri)
 include(VFloatRangeSelector.pri)
 include(VComboRangeSelector.pri)
+
+FORMS += \
+    VFloatRangeSelectorEditDialog.ui
 
