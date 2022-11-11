@@ -25,7 +25,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/vRFEducation/vcricularprogressbarwidget">
+  <a href="https://github.com/vRFEducation/vrangeselectorcollection">
     <img src="images/logo.png" alt="Logo">
   </a>
 
@@ -71,8 +71,8 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-[Product Name Screen Shot][product-screenshot1]
-[Product Name Screen Shot][product-screenshot2]
+[![Product Name Screen Shot][product-screenshot1]
+![Product Name Screen Shot][product-screenshot2]]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
